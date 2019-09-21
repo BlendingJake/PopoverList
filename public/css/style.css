@@ -1,0 +1,162 @@
+.popover-list-source, .popover-list-div {
+    font-family: sans-serif;
+    color: #555;
+    font-size: 14px;
+}
+
+.popover-list-source {
+    align-items: center;
+    font-weight: 400;
+    display: flex;
+}
+
+.popover-list-source:focus {
+    outline: none;
+}
+
+.popover-list-source span {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.popover-list-div {
+    -webkit-box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.2);
+    -moz-box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.2);
+    box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.2);
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    max-width: 300px;
+    min-width: 150px;
+    position: absolute;
+}
+
+.popover-list-div .header {
+    font-size: 16px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #f7f7f7;
+    font-weight: 400;
+}
+
+.popover-list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.popover-list-item {
+    padding: 8px 15px;
+    transition: background-color 0.2s ease;
+    background-color: white;
+}
+
+.popover-list-item a {
+    transition: color 0.2s ease;
+    margin-left: 5px;
+}
+
+.popover-list-item:not(.disabled):hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.popover-list-item:not(.disabled):hover a {
+    color: white;
+    cursor: pointer;
+}
+
+.popover-icon {
+    color: #aa66cc;
+}
+
+.popover-arrow {
+    position: absolute;
+}
+
+.popover-arrow:after, .popover-arrow:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+}
+
+.popover-arrow:after {
+    top: 2px;
+    border-width: 10px;
+}
+
+.popover-arrow:before {
+    top: 0;
+    border-width: 12px;
+}
+
+
+
+.popover-placement-left {
+    right: 0;
+}
+
+.popover-placement-left:after {
+    border-color: transparent transparent transparent white;
+}
+
+.popover-placement-left:before {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.2);
+}
+
+
+
+.popover-placement-right {
+    left: -24px;
+}
+
+.popover-placement-right:after {
+    border-color: transparent white transparent transparent;
+    left: 4px;
+}
+
+.popover-placement-right:before {
+    border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
+}
+
+
+
+.popover-placement-top {
+    bottom: 0;
+}
+
+.popover-placement-top:after {
+    border-color: white transparent transparent transparent;
+    left: 2px;
+    top: 0;
+}
+
+.popover-placement-top:before {
+    border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
+}
+
+
+
+
+.popover-placement-bottom {
+    top: -24px;
+}
+
+.popover-placement-bottom:after {
+    border-color: transparent transparent white transparent;
+    left: 2px;
+    top: 4px;
+}
+
+.popover-placement-bottom:before {
+    border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent;
+}
+
+
+
+.popover-icon:hover {
+    cursor: pointer;
+}

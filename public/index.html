@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <div style="margin: 20px"></div>
+    <div id="popover-outer" style="padding: 50px; display: flex">
+        <div style="width:200px"></div>
+    </div>
+
+    <script type="module">
+        import PopoverList from "./js/popover_list.js";
+        let list = new PopoverList("popover", {
+            icon: "cog",
+            text: "Settings",
+            title: "Settings",
+            icon_size: 2,
+            trigger: "click",
+            placement: "bottom",
+            offset: 8,
+            children: [
+                {
+                    icon: "chart-area",
+                    text: "Charts",
+                    callback: () => {console.log("chart");}
+                }
+            ]
+        });
+        list.draw(document.getElementById("popover-outer"));
+    </script>
+</body>
+</html>
