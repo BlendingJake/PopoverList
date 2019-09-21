@@ -1,6 +1,6 @@
 # PopoverList
 
-A JavaScript module for creating popover lists. The only dependency is  
+A JavaScript module for creating popover lists. The only dependency is   
 Font Awesome. Bootstrap and even jQuery are not used!
 
 ## Usage
