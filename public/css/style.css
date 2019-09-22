@@ -14,8 +14,12 @@
     outline: none;
 }
 
-.popover-list-source span {
-    margin-left: 5px;
+.popover-list-source i {  
+    margin-right: 5px;  
+    cursor: pointer;
+}
+
+.popover-list-source span, .popover-list-source {
     cursor: pointer;
 }
 
@@ -52,8 +56,11 @@
 }
 
 .popover-list-item a {
-    transition: color 0.2s ease;
-    margin-left: 5px;
+    transition: color 0.2s ease;    
+}
+
+.popover-list-item i {
+    margin-right: 5px;
 }
 
 .popover-list-item:not(.disabled):hover {
@@ -63,6 +70,10 @@
 
 .popover-list-item:not(.disabled):hover a {
     color: white;
+    cursor: pointer;
+}
+
+.popover-list-item:not(.disabled):hover i {
     cursor: pointer;
 }
 
@@ -153,10 +164,4 @@
 
 .popover-placement-bottom:before {
     border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent;
-}
-
-
-
-.popover-icon:hover {
-    cursor: pointer;
 }

@@ -13,6 +13,11 @@
         <div style="width:200px"></div>
     </div>
 
+    <div>
+        <button onclick="document.querySelector('#popover').dispatchEvent(new CustomEvent('show', {bubbles: true}))">Show</button>
+        <button onclick="document.querySelector('#popover').dispatchEvent(new CustomEvent('hide', {bubbles: true}))">Hide</button>
+    </div>
+
     <script type="module">
         import PopoverList from "./js/popover_list.js";
         let list = new PopoverList("popover", {
@@ -21,17 +26,25 @@
             title: "Settings",
             icon_size: 2,
             trigger: "click",
-            placement: "bottom",
+            placement: "left",
             offset: 8,
             children: [
                 {
                     icon: "chart-area",
-                    text: "Charts",
-                    callback: () => {console.log("chart");}
+                    disabled: true,
+                    center: true
+                },
+
+                {
+                    text: "Chart"
+                },
+
+                {
+                    text: "Another",
+                    icon: "table"
                 }
             ]
-        });
-        list.draw(document.getElementById("popover-outer"));
+        }, document.getElementById("popover-outer"));
     </script>
 </body>
 </html>
